@@ -52,7 +52,7 @@ local function gen_from_z(opts)
   end
 
   return function(line)
-    local score_str, dir = line:match'([%.%d]+)%s+(.+)'
+    local score_str, dir = line:match('(%d+)[ \t\n]+(.*)')
     local score = tonumber(score_str)
 
     return {
